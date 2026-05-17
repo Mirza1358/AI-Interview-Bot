@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <!-- Details Setup Screen -->
+    <div class="container glassmorphism" id="setup-screen">
+        <h1>Welcome to Your AI Interview</h1>
+        <p>Please enter your details to begin.</p>
+        <form id="setup-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <button type="submit">Start Interview</button>
+        </form>
+    </div>
+
+    <!-- Live Chat Screen -->
+    <div class="container glassmorphism hidden" id="chat-screen">
+        <div class="chat-header">
+            <h2>Live Interview</h2>
+            <span class="status-indicator"></span>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+        
+        <div class="input-area hidden" id="input-area">
+            <input type="text" id="chat-input" placeholder="Type your answer here..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
