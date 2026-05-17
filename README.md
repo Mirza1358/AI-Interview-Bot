@@ -7,6 +7,8 @@
 
 A professional, interactive, web-based Artificial Intelligence interview platform. This application acts as an automated software engineering interviewer that evaluates candidates through a dynamic 15-question process, complete with a beautiful, modern "Glassmorphism" UI.
 
+**🌍 Live Demo:** [http://mirza14.pythonanywhere.com/](http://mirza14.pythonanywhere.com/)
+
 ## ✨ Features
 
 - **Automated Interview Workflow:** The AI asks exactly 15 tailored software engineering questions (mixing behavioral and technical).
@@ -21,8 +23,9 @@ A professional, interactive, web-based Artificial Intelligence interview platfor
 - **Backend:** Python, Flask, Groq API
 - **Frontend:** Vanilla HTML5, CSS3, JavaScript (No heavy frameworks required!)
 - **AI Model:** LLaMA-3.3-70B-Versatile (via Groq)
+- **Deployment:** PythonAnywhere
 
-## 🚀 Getting Started
+## 🚀 Getting Started (Local Development)
 
 ### 1. Clone the repository
 ```bash
@@ -51,6 +54,13 @@ python app.py
 ### 5. Access the Platform
 Open your web browser and navigate to:
 **http://127.0.0.1:5000**
+
+## ☁️ Deployment (PythonAnywhere)
+This project is officially hosted on PythonAnywhere. If you wish to host your own version:
+1. Clone the repo in your PythonAnywhere Bash Console.
+2. Run `pip3.10 install --user -r requirements.txt`.
+3. Create the `.env` file in your root project directory via the PythonAnywhere file manager.
+4. Set up the `_wsgi.py` file to point to your repository and `app.py`.
 
 ## 📂 Project Structure
 - `app.py` - Core Flask server, routing, and Groq API logic.
