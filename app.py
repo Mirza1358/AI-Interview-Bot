@@ -128,7 +128,7 @@ def save_transcript(session_id):
     # Create a safe filename
     safe_name = "".join(c for c in chat_data['name'] if c.isalnum() or c in (' ', '_')).replace(' ', '_')
     filename = f"{safe_name}_interview_transcript.txt"
-    filepath = os.path.join(app.root_path, filename)
+    filepath = os.path.join('/tmp', filename)
     
     with open(filepath, 'w') as f:
         f.write("=== Interview Transcript ===\n")
