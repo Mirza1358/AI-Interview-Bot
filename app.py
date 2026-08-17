@@ -52,7 +52,7 @@ def start_interview():
     try:
         chat_completion = client.chat.completions.create(
             messages=messages,
-            model="llama-3.3-70b-versatile",
+            model="llama3-70b-8192",
         )
         response_text = chat_completion.choices[0].message.content
         
@@ -104,7 +104,7 @@ def chat():
     try:
         chat_completion = client.chat.completions.create(
             messages=chat_data['history'],
-            model="llama-3.3-70b-versatile",
+            model="llama3-70b-8192",
         )
         response_text = chat_completion.choices[0].message.content
         
