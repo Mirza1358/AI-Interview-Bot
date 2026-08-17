@@ -52,7 +52,7 @@ def start_interview():
     try:
         chat_completion = client.chat.completions.create(
             messages=messages,
-            model="llama3-70b-8192",
+            model="openai/gpt-oss-20b",
         )
         response_text = chat_completion.choices[0].message.content
         
@@ -104,7 +104,7 @@ def chat():
     try:
         chat_completion = client.chat.completions.create(
             messages=chat_data['history'],
-            model="llama3-70b-8192",
+            model="openai/gpt-oss-20b",
         )
         response_text = chat_completion.choices[0].message.content
         
