@@ -2,17 +2,17 @@
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black.svg?logo=flask)
-![Groq](https://img.shields.io/badge/AI-Groq%20LLaMA%203-orange.svg)
+![Groq](https://img.shields.io/badge/AI-Groq%20GPT%20OSS%2020B-orange.svg)
 ![HTML5](https://img.shields.io/badge/Frontend-Glassmorphism-purple.svg)
 
 A professional, interactive, web-based Artificial Intelligence interview platform. This application acts as an automated software engineering interviewer that evaluates candidates through a dynamic 15-question process, complete with a beautiful, modern "Glassmorphism" UI.
 
-**🌍 Live Demo:** [http://mirza14.pythonanywhere.com/](http://mirza14.pythonanywhere.com/)
+**🌍 Live Demo:** [https://ai-interview-bot-phi.vercel.app/](https://ai-interview-bot-phi.vercel.app/)
 
 ## ✨ Features
 
 - **Automated Interview Workflow:** The AI asks exactly 15 tailored software engineering questions (mixing behavioral and technical).
-- **Intelligent Feedback:** Uses the lightning-fast **Groq API (LLaMA 3 70B)** to provide constructive, real-time feedback on candidate answers.
+- **Intelligent Feedback:** Uses the lightning-fast **Groq API (GPT-OSS-20B)** to provide constructive, real-time feedback on candidate answers.
 - **Modern User Interface:** A gorgeous dark-mode frontend featuring frosted glass elements, floating background animations, and custom scrollbars.
 - **Smart Validation:** Secure candidate onboarding screen with strict input validations (e.g., numeric-only phone fields).
 - **Automated Data Export:** Once the interview concludes, the server automatically generates and saves a `.txt` file containing the candidate's name, email, phone, and full transcript for administrative review!
@@ -22,8 +22,8 @@ A professional, interactive, web-based Artificial Intelligence interview platfor
 
 - **Backend:** Python, Flask, Groq API
 - **Frontend:** Vanilla HTML5, CSS3, JavaScript (No heavy frameworks required!)
-- **AI Model:** LLaMA-3.3-70B-Versatile (via Groq)
-- **Deployment:** PythonAnywhere
+- **AI Model:** GPT-OSS-20B (via Groq)
+- **Deployment:** Vercel
 
 ## 🚀 Getting Started (Local Development)
 
@@ -55,12 +55,11 @@ python app.py
 Open your web browser and navigate to:
 **http://127.0.0.1:5000**
 
-## ☁️ Deployment (PythonAnywhere)
-This project is officially hosted on PythonAnywhere. If you wish to host your own version:
-1. Clone the repo in your PythonAnywhere Bash Console.
-2. Run `pip3.10 install --user -r requirements.txt`.
-3. Create the `.env` file in your root project directory via the PythonAnywhere file manager.
-4. Set up the `_wsgi.py` file to point to your repository and `app.py`.
+## ☁️ Deployment (Vercel)
+This project is fully configured for serverless deployment on Vercel.
+1. Connect your GitHub repository to a new Vercel Project.
+2. In the Vercel deployment settings, add your `GROQ_API_KEY` to the **Environment Variables**.
+3. Deploy! Vercel will automatically use the included `vercel.json` and install dependencies.
 
 ## 📂 Project Structure
 - `app.py` - Core Flask server, routing, and Groq API logic.
